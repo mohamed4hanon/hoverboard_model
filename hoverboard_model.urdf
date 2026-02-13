@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot name="hoverboard">
+
+  <!-- Medium Main Body -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.7 0.25 0.12"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Medium Left Wheel -->
+  <link name="left_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="black"><color rgba="0 0 0 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.15 0" rpy="1.5708 0 0"/>
+    <!-- Changed 1 to -1 to reverse rotation -->
+    <axis xyz="0 0 -1"/> 
+  </joint>
+
+  <!-- Medium Right Wheel -->
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.06" radius="0.075"/>
+      </geometry>
+      <material name="black"><color rgba="0 0 0 1"/></material>
+    </visual>
+  </link>
+
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.15 0" rpy="1.5708 0 0"/>
+    <!-- Changed 1 to -1 to reverse rotation -->
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+</robot>
