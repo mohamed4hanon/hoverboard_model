@@ -52,11 +52,11 @@ Use code with caution.
 
 ### ⚙️ Configuration
 #### Logic Level:
-         Ensure 3.3V logic for the FTDI to protect the STM32 mainboard.
+            Ensure 3.3V logic for the FTDI to protect the STM32 mainboard.
 #### Safety: 
-The driver includes a 0.5s timeout; if no breath command is received, the hoverboard stops automatically.
+           The driver includes a 0.5s timeout; if no breath command is received, the hoverboard stops automatically.
 #### Wheel Rotation:
-    URDF uses axis xyz="0 0 -1" to ensure wheels spin forward during movement.
+           URDF uses **axis xyz="0 0 -1"** to ensure wheels spin forward during movement.
 #### 📸 Visualization Setup
 In RViz2, ensure the following are added:
 - Fixed Frame: odom
